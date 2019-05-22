@@ -1,0 +1,15 @@
+UNF phd(personnel_number, name, date_of_birth, lab_code, lab_name, research_code, research_description, research_supervisor)
+ unnormalized form, all data in 1 entity
+
+1NF phd(personnel_number, name, date_of_birth, lab_code, lab_name) 
+ project(research_code, research_description, research_supervisor)
+ put repeating groups in individual table
+
+2NF phdstudent(personnel_number, name, date_of_birth) 
+  labinfo(personell_number, lab_code, lab_name)
+  project( research_code, research_description, research_supervisor)
+
+every non-prime attribute is dependent on the whole key of every candidate key
+
+3NF=2NF
+
